@@ -1,0 +1,221 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #ee6123;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+header {
+	padding: 30px;
+}
+
+header #logo {
+	height: 50px;
+}
+
+footer {
+	text-align: center;
+	padding: 30px;
+	font-size: 0.9em;
+}
+
+footer #logo {
+	height: 35px;
+	margin: 10px;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+	font-weight: 500;
+}
+
+h3 {
+	margin: 0;
+	color: #ee6123;
+	text-transform: uppercase;
+	padding-bottom: 30px;
+}
+
+input[type="url"] {
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.4);
+	padding: 17px 30px;
+	border: none;
+	width: 100%;
+	font-size: 1.3em;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+	padding: 17px 30px;
+	font-size: 1.3em;
+	border: none;
+	border-radius: 3px;
+	background: #ee6123;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+#hello {
+	background-image: url("../pictures/hello.jpg");
+	background-size: cover;
+	/* height: 500px; */
+	/* display: flex; */
+}
+
+#hello form {
+	text-align: center;
+	margin-top: 30px;
+}
+
+#result {
+	color: white;
+	margin: 20px;
+	padding: 30px;
+	border: 1px solid white;
+	border-radius: 10px;
+	display: inline-block;
+	/* width: 100%; */
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+#brands {
+	background-color: #eff7fc;
+	padding: 30px;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+	width: 100%;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.picture {
+	height: 35px;
+	margin: 15px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.url__container {
+	width: 100%;
+	overflow-wrap: break-word; /* Permet de casser les mots longs et d'éviter le débordement */
+	word-wrap: break-word; /* Ancienne propriété pour la compatibilité */
+	display: inline-block; /* Ou block, selon votre disposition */
+	max-width: 100%;
+}
+
+.brand-list {
+	list-style: none; /* Supprime les puces */
+	padding: 0; /* Supprime le padding par défaut */
+	display: flex; /* Affiche les éléments de liste en ligne */
+	justify-content: center; /* Centre les éléments horizontalement */
+	flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+	gap: 20px; /* Espacement entre les logos */
+}
+
+.brand-logo {
+	max-height: 50px; /* Hauteur maximale pour tous les logos */
+	width: auto; /* Maintient l'aspect ratio des images */
+	object-fit: contain; /* Assure que le logo s'adapte à la hauteur maximale sans être déformé */
+}
+
+/* Styles supplémentaires pour le conteneur et autres éléments si nécessaire */
+.container {
+	text-align: center;
+	/* Autres styles de mise en page */
+}
+
+/* Media Queries pour tablettes */
+@media (min-width: 768px) {
+	header,
+	footer {
+		padding: 20px;
+	}
+
+	header #logo,
+	footer #logo {
+		height: 40px; /* Taille ajustée pour les logos dans l'entête et le pied de page */
+	}
+
+	.container {
+		/* flex-direction: row; 
+		flex-wrap: wrap; 
+		justify-content: center;  */
+		padding: 20px;
+	}
+
+	.form {
+		flex-direction: row; /* Alignement horizontal des éléments du formulaire */
+		gap: 10px; /* Réduit l'espace entre les éléments du formulaire */
+	}
+
+	input[type="url"],
+	input[type="submit"] {
+		/* flex: 1; */
+		margin: 0 5px; /* Ajoute un petit espace entre les éléments */
+		padding: 10px 15px; /* Ajuste le padding pour une meilleure apparence */
+		font-size: 1em; /* Ajuste la taille de la police pour une meilleure lisibilité */
+	}
+
+	#hello form {
+		margin-top: 20px;
+	}
+
+	.brand-logo {
+		max-height: 40px; /* Ajustement de la taille des logos pour les tablettes */
+	}
+
+	.picture {
+		height: 30px; /* Ajustement de la taille pour les images */
+		margin: 10px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.form,
+	.center {
+		max-width: 1000px;
+		align-self: center;
+	}
+
+	.center {
+		max-width: 600px;
+	}
+}
